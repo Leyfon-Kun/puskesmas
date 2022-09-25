@@ -11,28 +11,26 @@
 </head>
 <body>
 
-<div class="">
-    <div class="card justify-content-center" style="width: 23rem;">
+    <div class="container card " style="width: 23rem;">
         <main class="form-signin w-100 m-auto">
-            <form>
-            <div class="d-flex no-block card-body align-items-center">
-                <img class="mb-4" src="{{ asset('template') }}/assets/img/brand/Logo-Puskesmas.png" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 fw-normal">Puskesmas</h1>
+            <form method="POST" action="/">
+                @csrf
+            <div class="d-flex no-block card-body ">
+                <img class="mb-10" src="{{ asset('template') }}/assets/img/brand/unknown.png" alt="">
                 </div>
                 <div class="form-floating">
                     <label for="floatingInput">Username:</label>
-                    <input type="username" class="form-control" id="floatingInput" placeholder="Username">
+                    <input type="username" class="form-control" name="username" id="floatingInput" placeholder="Username">
                 </div>
                 <div class="form-floating">
                     <label for="floatingPassword">Password:</label>
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
                 </div>
                 <br>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
             </form>
         </main>
     </div>
-</div>
 
 </body>
 </html>

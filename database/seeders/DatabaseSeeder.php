@@ -17,7 +17,12 @@ class DatabaseSeeder extends Seeder
         User::create([
             'username'=>'admin',
             'password'=>Hash::make('admin'),
-            'tipe'=>1,
+            'role'=>'admin',
+        ]);
+        User::create([
+            'username'=>'loket',
+            'password'=>Hash::make('loket'),
+            'role'=>'loket',
         ]);
     }
 }
