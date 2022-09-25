@@ -37,7 +37,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#navbar-dashboards"  >
+              <a class="nav-link active" href="#navbar-dashboards">
                 <i class="ni ni-shop text-primary"></i>
                 <span class="nav-link-text">Dashboards</span>
               </a>
