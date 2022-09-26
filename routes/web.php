@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [authController::class, 'loginUI']);
 Route::post('/', [authController::class, 'loginCheck']);
 
+
 Route::get('/home', function () {
     return view('home');
 });

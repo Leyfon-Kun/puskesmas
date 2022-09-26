@@ -56,11 +56,11 @@
               </a>
               <div class="collapse" id="navbar-examples">
                 <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="/daftar" class="nav-link">Pasien</a>
+                    </li>
                   <li class="nav-item">
-                    <a href="/registrasi" class="nav-link">Registrasi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/daftar" class="nav-link">Daftar</a>
+                    <a href="/registrasi" class="nav-link">Registrasi Pasien</a>
                   </li>
                 </ul>
               </div>
@@ -68,7 +68,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-components">
                 <i class="ni ni-ui-04 text-info"></i>
-                <span class="nav-link-text">Diagnosa</span>
+                <span class="nav-link-text">Dokter</span>
               </a>
               <div class="collapse" id="navbar-components">
                 <ul class="nav nav-sm flex-column">
@@ -97,12 +97,21 @@
             <li class="nav-item">
               <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
                 <i class="ni ni-align-left-2 text-default"></i>
-                <span class="nav-link-text">Dokter</span>
+                <span class="nav-link-text">User</span>
               </a>
               <div class="collapse" id="navbar-tables">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">List Dokter</a>
+                    <a href="#" class="nav-link">Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Loket</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Dokter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Apoteker</a>
                   </li>
                 </ul>
               </div>
@@ -156,9 +165,9 @@
     </nav>
     <!-- Page content -->
     <div class="container-fluid mt--5">
-  
+
       @yield('content')
-  
+
     </div>
   </div>
 
