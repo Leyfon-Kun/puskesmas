@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\LoketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,5 @@ Route::get('/daftar', function () {
     return view('daftar');
 });
 
-Route::get('/registrasi', function () {
-    return view('registrasi');
-});
+Route::get('/registrasi', [LoketController::class, 'index']);
+

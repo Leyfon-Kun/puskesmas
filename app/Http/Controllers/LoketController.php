@@ -9,12 +9,14 @@ class LoketController extends Controller
 {
     public function __construct()
     {
-        $this->pasien = new Loket;
+        $this->Loket = new Loket;
     }
 
     public function index()
     {
-        $pasien = $this->pasien->showData();
-        return view('Registrasi', compact(('pasien')));
+        $pasien = [
+            'pasien' => $this->Loket->showData(),
+        ];
+        return view('Registrasi', $pasien);
     }
 }

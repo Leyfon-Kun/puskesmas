@@ -27,7 +27,7 @@
         @foreach ($pasien as $view)
             <tr>
                 <td>{{ $view->no_pasien }}</td>
-                <td>{{ $view->nama }}</td>
+                <td>{{ $view->nama_pasien }}</td>
                 <td>{{ $view->nik }}</td>
                 <td>{{ $view->tgl_lahir }}</td>
                 <td>{{ $view->tmpt_lahir }}</td>
