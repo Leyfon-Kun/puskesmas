@@ -5,7 +5,17 @@
 <br>
 <br>
 <br>
-<h2>Home</h2>
+<div class="header">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-7">
+          <h2 class="h2 text-black d-inline-block mb-0">Home</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <br>
 <div class="row">
     <div class="col-xl-3 col-md-6">
