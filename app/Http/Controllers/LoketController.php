@@ -20,8 +20,9 @@ class LoketController extends Controller
         return view('Registrasi', $pasien);
     }
 
-    public function indexregistrasipasien()
+    public function createpasien()
     {
         return view('Daftar');
     }
+
 }

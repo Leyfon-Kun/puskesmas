@@ -24,6 +24,6 @@ Route::post('/', [authController::class, 'loginCheck']);
 Route::get('/dashboard/home', [DashboardController::class, 'index']);
 
 //Loket
-Route::get('/loket/pasien', [LoketController::class, 'indexregistrasipasien']);
+Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
 Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
 
