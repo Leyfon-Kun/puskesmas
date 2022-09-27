@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoketController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,14 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [authController::class, 'loginUI']);
 Route::post('/', [authController::class, 'loginCheck']);
 
+//dashboard
+Route::get('/dashboard/home', [DashboardController::class, 'index']);
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/daftar', function () {
-    return view('daftar');
-});
-
-Route::get('/registrasi', [LoketController::class, 'index']);
+//Loket
+Route::get('/loket/pasien', [LoketController::class, 'indexregistrasipasien']);
+Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
 

@@ -13,4 +13,9 @@ class Loket extends Model
         return DB::table('pasien')->get();
     }
 
+    public function createData($data)
+    {
+        return DB::table('pasien')->insert($data);
+    }
+
 }

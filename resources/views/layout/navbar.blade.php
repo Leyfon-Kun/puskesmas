@@ -44,7 +44,7 @@
               <div class="collapse show" id="navbar-dashboards">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
+                    <a href="/dashboard/home" class="nav-link">Home</a>
                   </li>
                 </ul>
               </div>
@@ -57,10 +57,10 @@
               <div class="collapse" id="navbar-examples">
                 <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="/daftar" class="nav-link">Pasien</a>
+                      <a href="/loket/pasien" class="nav-link">Pasien</a>
                     </li>
                   <li class="nav-item">
-                    <a href="/registrasi" class="nav-link">Registrasi Pasien</a>
+                    <a href="/loket/registrasi" class="nav-link">Registrasi Pasien</a>
                   </li>
                 </ul>
               </div>

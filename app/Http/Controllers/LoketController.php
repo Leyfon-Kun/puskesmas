@@ -12,11 +12,16 @@ class LoketController extends Controller
         $this->Loket = new Loket;
     }
 
-    public function index()
+    public function indexpasien()
     {
         $pasien = [
             'pasien' => $this->Loket->showData(),
         ];
         return view('Registrasi', $pasien);
+    }
+
+    public function indexregistrasipasien()
+    {
+        return view('Daftar');
     }
 }

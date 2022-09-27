@@ -8,7 +8,7 @@
     <h2>Registrasi Pasien</h2>
 <br>
 <div class="table-responsive">
-    <table class="table align-items-center table-flush">
+    <table class="table align-items-center table-flush" >
       <thead class="thead-light">
         <tr>
           <th scope="col" class="sort">No</th>

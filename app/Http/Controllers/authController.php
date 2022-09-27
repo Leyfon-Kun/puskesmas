@@ -21,9 +21,9 @@ class authController extends Controller
         $password = $request->password;
 
         if (Auth::attempt(['username'=>$username,'password'=>$password,'role'=>'admin'])) {
-            return redirect('/home');
+            return redirect('/dashboard/home');
         }else if (Auth::attempt(['username'=>$username,'password'=>$password,'role'=>'loket'])) {
-            return redirect('/daftar');
+            return redirect('/loket/pasien');
         }else if (Auth::attempt(['username'=>$username, 'password'=>$password, 'role'=>'dokter'])) {
             return redirect('/diagnosa');
         }else if (Auth::attempt(['username'=>$username, 'password'=>$password, 'role'=>'apoteker'])) {
