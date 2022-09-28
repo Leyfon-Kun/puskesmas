@@ -25,4 +25,26 @@ class LoketController extends Controller
         return view('Daftar');
     }
 
+    public function save()
+    {
+        Request()->validate([
+            'no' => 'required',
+            'nama' => 'required',
+            'nik' => 'required',
+            'nohp' => 'required'
+        ],[
+            'no.required' => 'diisi ya sayangkuh',
+            'nama.required' => 'diisi ya sayangkuh',
+            'nik.required' => 'diisi ya sayangkuh',
+            'nohp.required' => 'diisi ya sayangkuh'
+        ]);
+
+        $result = [
+            'no' => Request()->no,
+            'nama' => request()->nama,
+            'nik' => request()->nik,
+            'nohp' => request()->no
+        ];
+    }
+
 }
