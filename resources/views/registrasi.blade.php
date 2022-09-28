@@ -13,7 +13,7 @@
           <h2 class="h2 text-black d-inline-block mb-0">Registrasi Pasien</h2>
         </div>
         <div class="col-lg-6 col-5 text-right">
-          <a href="#" class="btn btn-sm btn-neutral">New</a>
+          <a href="/loket/pasien" class="btn btn-sm btn-neutral">New</a>
         </div>
       </div>
     </div>
