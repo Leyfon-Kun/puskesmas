@@ -25,9 +25,9 @@ class LoketController extends Controller
         return view('Daftar');
     }
 
-    public function save()
+    public function save(Request $request)
     {
-        Request()->validate([
+        $request->validate([
             'no' => 'required',
             'nama' => 'required',
             'nik' => 'required',
@@ -45,6 +45,10 @@ class LoketController extends Controller
             'nik' => request()->nik,
             'nohp' => request()->no
         ];
+
+        $this->Loket->createData($result);
+
+        return redirect('/loket/pasien')->with('pesan', 'Data Berhasil Di Tambah');
     }
 
 }

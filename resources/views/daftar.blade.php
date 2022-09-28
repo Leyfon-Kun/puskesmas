@@ -17,46 +17,43 @@
     </div>
   </div>
 <br>
-<form action="" method="POST">
+<form action="/loket/registrasi" method="POST">
+    @csrf
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
-        <input name="nopasien" type="number" class="form-control" id="exampleFormControlInput1" placeholder="No Pasien">
-        @error('no') {{ $massage }} @enderror
+        <input name="nopasien" type="number" value="{{ old('nopasien') }}" class="form-control" id="exampleFormControlInput1" placeholder="No Pasien">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Nama Pasien</label>
-        <input name="nama" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pasien">
-        @error('nama') {{ $massage }} @enderror
+        <input name="nama" type="name" value="{{ old('nama') }}" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pasien">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">NIK</label>
-        <input name="nik" type="number" class="form-control" id="exampleFormControlInput1" placeholder="NIK">
-        @error('nik') {{ $massage }} @enderror
+        <input name="nik" type="number" value="{{ old('nik') }}" class="form-control" id="exampleFormControlInput1" placeholder="NIK">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Tanggal Lahir</label>
-        <input name="tgllhr" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Tanggal Lahir">
+        <input name="tgllhr" type="date" value="{{ old('tgllhr') }}" class="form-control" id="exampleFormControlInput1" placeholder="Tanggal Lahir">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Tempat Lahir</label>
-        <input name="tmplhr" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat Lahir">
+        <input name="tmplhr" type="text" value="{{ old('tmplhr') }}" class="form-control" id="exampleFormControlInput1" placeholder="Tempat Lahir">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
-        <input name="umur" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Umur">
+        <input name="umur" type="number" value="{{ old('umur') }}" class="form-control" id="exampleFormControlInput1" placeholder="Umur">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
-        <input name="alamat" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alamat">
+        <input name="alamat" type="text" value="{{ old('alamat') }}" class="form-control" id="exampleFormControlInput1" placeholder="Alamat">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
-        <input name="nohp" type="number" class="form-control" id="exampleFormControlInput1" placeholder="No Telpon">
-        @error('nohp') {{ $massage }} @enderror
+        <input name="nohp" type="number" value="{{ old('nohp') }}" class="form-control" id="exampleFormControlInput1" placeholder="No Telpon">
       </div>
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
-        <select name="jk" class="form-control" id="exampleFormControlSelect1">
+        <select name="jk" value="{{ old('jk') }}" class="form-control" id="exampleFormControlSelect1">
           <option class="disabled">Jenis Kelamin</option>
           <option value="laki-laki">Laki-Laki</option>
           <option value="perempuan">Perempuan</option>

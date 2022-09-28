@@ -29,6 +29,10 @@ class authController extends Controller
         }else if (Auth::attempt(['username'=>$username, 'password'=>$password, 'role'=>'apoteker'])) {
             return redirect('/apoteker');
         }else (dd('data tidak ditemukan'));
+    }
 
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
     }
 }

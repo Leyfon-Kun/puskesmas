@@ -17,13 +17,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 //login
-Route::get('/', [authController::class, 'loginUI']);
+Route::get('/', [authController::class, 'loginUI'])->name('login');
 Route::post('/', [authController::class, 'loginCheck']);
+//logout
+Route::get('/logout', [authController::class, 'logout']);
+route::middleware(['auth'])->group(function() {
 
-//dashboard
-Route::get('/dashboard/home', [DashboardController::class, 'index']);
+    //dashboard
+    Route::get('/dashboard/home', [DashboardController::class, 'index']);
 
-//Loket
-Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
-Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
+    //Loket
+    Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
+    Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
+    Route::post('/loket/registrasi', [LoketController::class, 'save']);
 
+});
