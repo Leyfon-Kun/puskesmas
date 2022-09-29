@@ -15,7 +15,7 @@
         <main class="form-signin w-100 m-auto">
             <form method="POST" action="/">
                 @csrf
-            <div class="d-flex no-block card-body ">
+                <div class="d-flex no-block card-body ">
                 <img class="mb-10" src="{{ asset('template') }}/assets/img/brand/unknown.png" alt="">
                 </div>
                 <div class="form-floating">

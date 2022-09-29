@@ -5,6 +5,15 @@
 <br>
 <br>
 <br>
+@if (Session::has('pesan'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+    <span class="alert-text">{{ Session::get('pesan') }}</span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+@endif
 <div class="header">
   <div class="container-fluid">
     <div class="header-body">
@@ -48,6 +57,45 @@
                 <td>{{ $view->alamat }}</td>
                 <td>{{ $view->telpon }}</td>
                 <td>{{ $view->jk }}</td>
+                <td>
+                <div class="dropdown show">
+                    <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-icon btn-primary" type="button">
+                            <span class="btn-inner--icon"><i class="ni ni-bullet-list-67"></i></span>
+                        </button>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        {{-- Info --}}
+                        <a class="dropdown-item" href="#">
+                            <button type="button" class="btn btn-info">
+                                <i class="ni ni-badge"></i>
+                                <span>Detail</span>
+                            </button>
+                        </a>
+                        {{-- Edit --}}
+                        <a class="dropdown-item" href="#">
+                            <button type="button" class="btn btn-warning">
+                                <i class="ni ni-ruler-pencil"></i>
+                                <span>Edit</span>
+                            </button>
+                        </a>
+                        {{-- Deleted --}}
+                        <a class="dropdown-item" href="#">
+                            <button type="button" class="btn btn-danger">
+                                <i class="ni ni-fat-remove"></i>
+                                <span>Deleted</span>
+                            </button>
+                        </a>
+                        {{-- Select --}}
+                        <a class="dropdown-item" href="#">
+                            <button type="button" class="btn btn-success">
+                                <i class="ni ni-active-40"></i>
+                                <span>Select</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                </td>
             </tr>
         @endforeach
       </tbody>
