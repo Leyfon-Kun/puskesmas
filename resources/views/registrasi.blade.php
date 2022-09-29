@@ -80,8 +80,8 @@
                             </button>
                         </a>
                         {{-- Deleted --}}
-                        <a class="dropdown-item" href="#">
-                            <button type="button" class="btn btn-danger">
+                        <a class="dropdown-item" href="/loket/registrasi/{{ $view->no_pasien }}">
+                            <button type="reset" class="btn btn-danger" data-target="#hps{{ $view->no_pasien }}">
                                 <i class="ni ni-fat-remove"></i>
                                 <span>Deleted</span>
                             </button>

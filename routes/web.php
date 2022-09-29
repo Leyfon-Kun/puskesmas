@@ -30,5 +30,6 @@ route::middleware(['auth'])->group(function() {
     Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);
+    Route::get('/loket/registrasi/{id}', [LoketController::class, 'delete']);
 
 });
