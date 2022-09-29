@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //login
-Route::get('/', [authController::class, 'loginUI'])->name('login');
+Route::get('/', [authController::class, 'loginUI'])->name('login')->middleware('guest');
 Route::post('/', [authController::class, 'loginCheck']);
 //logout
 Route::get('/logout', [authController::class, 'logout']);

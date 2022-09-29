@@ -18,4 +18,8 @@ class Loket extends Model
         return DB::table('pasien')->insert($data);
     }
 
+    public function DeleteData($id)
+    {
+        return DB::table('pasien')->where('no_pasien', $id)->delete();
+    }
 }

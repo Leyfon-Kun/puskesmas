@@ -63,7 +63,13 @@ class LoketController extends Controller
 
         $this->Loket->createData($result);
 
-        return redirect('/loket/pasien')->with('pesan', 'Data Berhasil Di Tambah');
+        return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Tambah');
+    }
+
+    public function delete($id)
+    {
+        $this->Loket->DeleteData($id);
+        return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Hapus');
     }
 
 }
