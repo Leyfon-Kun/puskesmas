@@ -7,31 +7,33 @@ use Illuminate\Support\Facades\Auth;
 
 class authController extends Controller
 {
-    public function loginUI(){
+    public function loginUI()
+    {
         return view('auth.login');
     }
     public  function loginCheck(Request $request)
     {
-        $valid = $request->validate([
-            'username'=>"required",
-            'password'=>"required",
+        $request->validate([
+            'username' => "required",
+            'password' => "required",
         ]);
 
         $username = $request->username;
         $password = $request->password;
 
-        if (Auth::attempt(['username'=>$username,'password'=>$password,'role'=>'admin'])) {
-            return redirect('/dashboard/home');
-        }else if (Auth::attempt(['username'=>$username,'password'=>$password,'role'=>'loket'])) {
+        if (Auth::attempt(['username' => $username, 'password' => $password, 'role' => 'admin'])) {
+            return redirect('/dashboard');
+        } else if (Auth::attempt(['username' => $username, 'password' => $password, 'role' => 'loket'])) {
             return redirect('/loket/pasien');
-        }else if (Auth::attempt(['username'=>$username, 'password'=>$password, 'role'=>'dokter'])) {
+        } else if (Auth::attempt(['username' => $username, 'password' => $password, 'role' => 'dokter'])) {
             return redirect('/diagnosa');
-        }else if (Auth::attempt(['username'=>$username, 'password'=>$password, 'role'=>'apoteker'])) {
+        } else if (Auth::attempt(['username' => $username, 'password' => $password, 'role' => 'apoteker'])) {
             return redirect('/apoteker');
-        }else (dd('data tidak ditemukan'));
+        } else (dd('data tidak ditemukan'));
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return redirect('/');
     }

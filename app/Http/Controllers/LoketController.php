@@ -37,7 +37,7 @@ class LoketController extends Controller
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
-        ],[
+        ], [
             // 'nopasien.required' => 'Harap Diisi',
             'nama.required' => 'Harap Diisi',
             'nik.required' => 'Harap Diisi',
@@ -71,5 +71,4 @@ class LoketController extends Controller
         $this->Loket->DeleteData($id);
         return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Hapus');
     }
-
 }

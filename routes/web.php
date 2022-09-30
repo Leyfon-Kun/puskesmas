@@ -21,7 +21,7 @@ Route::get('/', [authController::class, 'loginUI'])->name('login')->middleware('
 Route::post('/', [authController::class, 'loginCheck']);
 //logout
 Route::get('/logout', [authController::class, 'logout']);
-route::middleware(['auth'])->group(function() {
+route::middleware(['auth'])->group(function () {
 
     //dashboard
     Route::get('/dashboard', [DashboardController::class, 'index']);
@@ -31,5 +31,4 @@ route::middleware(['auth'])->group(function() {
     Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);
     Route::get('/loket/registrasi/{id}', [LoketController::class, 'delete']);
-
 });
