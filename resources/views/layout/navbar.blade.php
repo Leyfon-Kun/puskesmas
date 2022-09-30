@@ -37,17 +37,17 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#navbar-dashboards">
+              <a class="nav-link active" href="/dashboard">
                 <i class="ni ni-shop text-primary"></i>
                 <span class="nav-link-text">Dashboards</span>
               </a>
-              <div class="collapse show" id="navbar-dashboards">
+              {{-- <div class="collapse show" id="navbar-dashboards">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
                     <a href="/dashboard/home" class="nav-link">Home</a>
                   </li>
                 </ul>
-              </div>
+              </div> --}}
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">

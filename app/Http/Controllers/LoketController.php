@@ -17,18 +17,18 @@ class LoketController extends Controller
         $pasien = [
             'pasien' => $this->Loket->showData(),
         ];
-        return view('Registrasi', $pasien);
+        return view('loket.Registrasi', $pasien);
     }
 
     public function createpasien()
     {
-        return view('Daftar');
+        return view('loket.Daftar');
     }
 
     public function save(Request $request)
     {
         $request->validate([
-            'nopasien' => 'required',
+            // 'nopasien' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
@@ -38,7 +38,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ],[
-            'nopasien.required' => 'Harap Diisi',
+            // 'nopasien.required' => 'Harap Diisi',
             'nama.required' => 'Harap Diisi',
             'nik.required' => 'Harap Diisi',
             'tgllhr.required' => 'Harap Diisi',
@@ -50,7 +50,7 @@ class LoketController extends Controller
         ]);
 
         $result = [
-            'no_pasien' => Request()->nopasien,
+            // 'no_pasien' => Request()->nopasien,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class authController extends Controller
 {
     public function loginUI(){
-        return view('login');
+        return view('auth.login');
     }
     public  function loginCheck(Request $request)
     {

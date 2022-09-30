@@ -19,10 +19,10 @@
 <br>
 <form action="/loket/registrasi" method="POST">
     @csrf
-      <div class="form-group">
+      {{-- <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
         <input name="nopasien" type="number" value="{{ old('nopasien') }}" class="form-control" id="exampleFormControlInput1" placeholder="No Pasien">
-      </div>
+      </div> --}}
       <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">Nama Pasien</label>
         <input name="nama" type="name" value="{{ old('nama') }}" class="form-control" id="exampleFormControlInput1" placeholder="Nama Pasien">

@@ -24,7 +24,7 @@ Route::get('/logout', [authController::class, 'logout']);
 route::middleware(['auth'])->group(function() {
 
     //dashboard
-    Route::get('/dashboard/home', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 
     //Loket
     Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
