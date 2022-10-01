@@ -32,10 +32,9 @@
     <div class="card">
         <!-- Card header -->
         <div class="card-header">
-            <h3 class="mb-0">Datatable</h3>
+            <h3 class="mb-0">Data Pasien</h3>
             <p class="text-sm mb-0">
-                This is an exmaple of datatable using the well known datatables.net plugin. This is a minimal setup in order
-                to get started fast.
+                Data Yang Ada Adalah Data Yang Sudah Daftar Dan Akan Lanjut Registrasi
             </p>
         </div>
         <div class="table-responsive py-4">
@@ -108,7 +107,7 @@
                                                         </button>
                                                     </a>
                                                     {{-- Edit --}}
-                                                    <a class="dropdown-item" href="#">
+                                                    <a class="dropdown-item" href="/loket/registrasi/edit">
                                                         <button type="button" class="btn btn-warning">
                                                             <i class="ni ni-ruler-pencil"></i>
                                                             <span>Edit</span>
@@ -155,8 +154,6 @@
                                         class="page-link">1</a></li>
                                 <li class="paginate_button page-item "><a href="#" aria-controls="datatable-basic"
                                         data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="datatable-basic"
-                                        data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
                                 <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#"
                                         aria-controls="datatable-basic" data-dt-idx="7" tabindex="0"
                                         class="page-link"><i class="fas fa-angle-right"></i></a></li>
