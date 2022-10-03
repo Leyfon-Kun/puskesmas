@@ -74,7 +74,8 @@ class LoketController extends Controller
 
     public function update($id)
     {
-        return view('loket.edit');
+        $data = $this->Loket->DetailData($id);
+        return view('loket.edit', compact(('data')));
     }
 
 

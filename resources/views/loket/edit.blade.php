@@ -24,49 +24,51 @@
       </div> --}}
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Nama Pasien</label>
-            <input name="nama" type="name" value="{{ old('nama', $view->nama) }}" class="form-control"
+            <input name="nama" type="name" value="{{ old('nama', $data->nama_pasien) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Nama Pasien">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">NIK</label>
-            <input name="nik" type="number" value="{{ old('nik') }}" class="form-control"
+            <input name="nik" type="number" value="{{ old('nik', $data->nik) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="NIK">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tanggal Lahir</label>
-            <input name="tgllhr" type="date" value="{{ old('tgllhr') }}" class="form-control"
+            <input name="tgllhr" type="date" value="{{ old('tgllhr', $data->tgl_lahir) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tanggal Lahir">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tempat Lahir</label>
-            <input name="tmplhr" type="text" value="{{ old('tmplhr') }}" class="form-control"
+            <input name="tmplhr" type="text" value="{{ old('tmplhr', $data->tmpt_lahir) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tempat Lahir">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
-            <input name="umur" type="number" value="{{ old('umur') }}" class="form-control"
+            <input name="umur" type="number" value="{{ old('umur', $data->umur) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Umur">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
-            <input name="alamat" type="text" value="{{ old('alamat') }}" class="form-control"
+            <input name="alamat" type="text" value="{{ old('alamat', $data->alamat) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Alamat">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
-            <input name="nohp" type="number" value="{{ old('nohp') }}" class="form-control"
+            <input name="nohp" type="number" value="{{ old('nohp', $view->telpon) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Telpon">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
             <select name="jk" value="{{ old('jk') }}" class="form-control" id="exampleFormControlSelect1">
+                <option selected value="{{ $view->jk }}">{{ $view->jk }}
+                </option>
                 <option class="disabled">Jenis Kelamin</option>
                 <option value="laki-laki">Laki-Laki</option>
                 <option value="perempuan">Perempuan</option>
             </select>
         </div>
         <div class="col-lg-6 col-5 text-right">
-            <button type="submit" class="btn btn-sm btn-neutral btn-secondary">Kirim</button>
+            <button type="submit" class="btn btn-sm btn-neutral btn-secondary">Simpan</button>
         </div>
         <br>
     </form>

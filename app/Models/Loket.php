@@ -27,4 +27,8 @@ class Loket extends Model
     {
         return DB::table('pasien')->where('no_pasien', $id)->update($data);
     }
+    public function DetailData($id)
+    {
+        return DB::table('pasien')->where('no_pasien', $id)->first();
+    }
 }
