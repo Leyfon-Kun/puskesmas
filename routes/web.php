@@ -27,8 +27,16 @@ route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     //Loket
-    Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::get('/loket/registrasi', [LoketController::class, 'indexpasien']);
+
+    //tambah
+    Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);
+
+    //hapus
     Route::get('/loket/registrasi/{id}', [LoketController::class, 'delete']);
+
+    //edit
+    Route::get('/loket/registrasi/edit/{id}', [LoketController::class, 'update']);
+    Route::post('/loket/registrasi/edit/{id}', [LoketController::class, 'edit']);
 });

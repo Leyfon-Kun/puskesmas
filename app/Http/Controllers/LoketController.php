@@ -71,4 +71,51 @@ class LoketController extends Controller
         $this->Loket->DeleteData($id);
         return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Hapus');
     }
+
+    public function update($id)
+    {
+        return view('loket.edit');
+    }
+
+
+    public function edit($id)
+    {
+        Request()->validate([
+            // 'nopasien' => 'required',
+            'nama' => 'required',
+            'nik' => 'required',
+            'tgllhr' => 'required',
+            'tmplhr' => 'required',
+            'umur' => 'required',
+            'alamat' => 'required',
+            'nohp' => 'required',
+            'jk' => 'required'
+        ], [
+            // 'nopasien.required' => 'Harap Diisi',
+            'nama.required' => 'Harap Diisi',
+            'nik.required' => 'Harap Diisi',
+            'tgllhr.required' => 'Harap Diisi',
+            'tmplhr.required' => 'Harap Diisi',
+            'umur.required' => 'Harap Diisi',
+            'alamat.required' => 'Harap Diisi',
+            'nohp.required' => 'Harap Diisi',
+            'jk.required' => 'Harap diisi'
+        ]);
+
+        $result = [
+            // 'no_pasien' => Request()->nopasien,
+            'nama_pasien' => Request()->nama,
+            'nik' => Request()->nik,
+            'tgl_lahir' => Request()->tgllhr,
+            'tmpt_lahir' => Request()->tmplhr,
+            'umur' => Request()->umur,
+            'alamat' => Request()->alamat,
+            'telpon' => Request()->nohp,
+            'jk' => Request()->jk
+        ];
+
+        $this->pasien->EditData($id, $result);
+
+        return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Edit');
+    }
 }

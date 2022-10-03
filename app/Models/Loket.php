@@ -22,4 +22,9 @@ class Loket extends Model
     {
         return DB::table('pasien')->where('no_pasien', $id)->delete();
     }
+
+    public function EditData($id, $data)
+    {
+        return DB::table('pasien')->where('no_pasien', $id)->update($data);
+    }
 }

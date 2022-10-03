@@ -107,7 +107,8 @@
                                                         </button>
                                                     </a>
                                                     {{-- Edit --}}
-                                                    <a class="dropdown-item" href="/loket/registrasi/edit">
+                                                    <a class="dropdown-item"
+                                                        href="/loket/registrasi/edit/{{ $view->no_pasien }}">
                                                         <button type="button" class="btn btn-warning">
                                                             <i class="ni ni-ruler-pencil"></i>
                                                             <span>Edit</span>
