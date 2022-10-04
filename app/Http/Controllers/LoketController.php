@@ -115,7 +115,9 @@ class LoketController extends Controller
             'jk' => Request()->jk
         ];
 
-        $this->pasien->EditData($id, $result);
+        $this->Loket->EditData($id, $result);
+
+        // dd($id);
 
         return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Edit');
     }

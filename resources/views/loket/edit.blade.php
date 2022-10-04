@@ -16,7 +16,8 @@
         </div>
     </div>
     <br>
-    <form action="/loket/registrasi" method="POST">
+    <form action="/loket/registrasi/edit/{{ $data->no_pasien }}" method="POST">
+        @method('put')
         @csrf
         {{-- <div class="form-group">
         <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
@@ -54,13 +55,13 @@
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
-            <input name="nohp" type="number" value="{{ old('nohp', $view->telpon) }}" class="form-control"
+            <input name="nohp" type="number" value="{{ old('nohp', $data->telpon) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Telpon">
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
             <select name="jk" value="{{ old('jk') }}" class="form-control" id="exampleFormControlSelect1">
-                <option selected value="{{ $view->jk }}">{{ $view->jk }}
+                <option selected value="{{ $data->jk }}">{{ $data->jk }}
                 </option>
                 <option class="disabled">Jenis Kelamin</option>
                 <option value="laki-laki">Laki-Laki</option>

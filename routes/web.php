@@ -33,10 +33,11 @@ route::middleware(['auth'])->group(function () {
     Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);
 
+
     //hapus
     Route::get('/loket/registrasi/{id}', [LoketController::class, 'delete']);
 
     //edit
     Route::get('/loket/registrasi/edit/{id}', [LoketController::class, 'update']);
-    Route::post('/loket/registrasi/edit/{id}', [LoketController::class, 'edit']);
+    Route::put('/loket/registrasi/edit/{id}', [LoketController::class, 'edit']);
 });
