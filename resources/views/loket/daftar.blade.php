@@ -26,36 +26,57 @@
             <label class="form-control-label" for="exampleFormControlInput1">Nama Pasien</label>
             <input name="nama" type="name" value="{{ old('nama') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Nama Pasien">
+            @error('nama')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">NIK</label>
             <input name="nik" type="number" value="{{ old('nik') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="NIK">
+            @error('nik')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tanggal Lahir</label>
             <input name="tgllhr" type="date" value="{{ old('tgllhr') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tanggal Lahir">
+            @error('tgllhr')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tempat Lahir</label>
             <input name="tmplhr" type="text" value="{{ old('tmplhr') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tempat Lahir">
+            @error('tmplhr')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
             <input name="umur" type="number" value="{{ old('umur') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Umur">
+            @error('umur')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
             <input name="alamat" type="text" value="{{ old('alamat') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Alamat">
+            @error('alamat')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
             <input name="nohp" type="number" value="{{ old('nohp') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Telpon">
+            @error('nohp')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
@@ -64,6 +85,9 @@
                 <option value="laki-laki">Laki-Laki</option>
                 <option value="perempuan">Perempuan</option>
             </select>
+            @error('jk')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="col-lg-6 col-5 text-right">
             <button type="submit" class="btn btn-sm btn-neutral btn-secondary">Kirim</button>

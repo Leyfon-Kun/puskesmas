@@ -39,14 +39,14 @@ class LoketController extends Controller
             'jk' => 'required'
         ], [
             // 'nopasien.required' => 'Harap Diisi',
-            'nama.required' => 'Harap Diisi',
-            'nik.required' => 'Harap Diisi',
-            'tgllhr.required' => 'Harap Diisi',
-            'tmplhr.required' => 'Harap Diisi',
-            'umur.required' => 'Harap Diisi',
-            'alamat.required' => 'Harap Diisi',
-            'nohp.required' => 'Harap Diisi',
-            'jk.required' => 'Harap diisi'
+            'nama.required' => 'Wajib Diisi',
+            'nik.required' => 'Wajib Diisi',
+            'tgllhr.required' => 'Wajib Diisi',
+            'tmplhr.required' => 'Wajib Diisi',
+            'umur.required' => 'Wajib Diisi',
+            'alamat.required' => 'Wajib Diisi',
+            'nohp.required' => 'Wajib Diisi',
+            'jk.required' => 'Wajib diisi'
         ]);
 
         $result = [
@@ -93,14 +93,14 @@ class LoketController extends Controller
             'jk' => 'required'
         ], [
             // 'nopasien.required' => 'Harap Diisi',
-            'nama.required' => 'Harap Diisi',
-            'nik.required' => 'Harap Diisi',
-            'tgllhr.required' => 'Harap Diisi',
-            'tmplhr.required' => 'Harap Diisi',
-            'umur.required' => 'Harap Diisi',
-            'alamat.required' => 'Harap Diisi',
-            'nohp.required' => 'Harap Diisi',
-            'jk.required' => 'Harap diisi'
+            'nama.required' => 'Wajib Diisi',
+            'nik.required' => 'Wajib Diisi',
+            'tgllhr.required' => 'Wajib Diisi',
+            'tmplhr.required' => 'Wajib Diisi',
+            'umur.required' => 'Wajib Diisi',
+            'alamat.required' => 'Wajib Diisi',
+            'nohp.required' => 'Wajib Diisi',
+            'jk.required' => 'Wajib diisi'
         ]);
 
         $result = [
