@@ -28,7 +28,7 @@ class LoketController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            // 'nopasien' => 'required',
+            'nopasien' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
@@ -38,7 +38,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            // 'nopasien.required' => 'Harap Diisi',
+            'nopasien.required' => 'Harap Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
@@ -50,7 +50,7 @@ class LoketController extends Controller
         ]);
 
         $result = [
-            // 'no_pasien' => Request()->nopasien,
+            'no_pasien' => Request()->nopasien,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
@@ -82,7 +82,7 @@ class LoketController extends Controller
     public function edit($id)
     {
         Request()->validate([
-            // 'nopasien' => 'required',
+            'nopasien' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
@@ -92,7 +92,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            // 'nopasien.required' => 'Harap Diisi',
+            'nopasien.required' => 'Harap Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
@@ -104,7 +104,7 @@ class LoketController extends Controller
         ]);
 
         $result = [
-            // 'no_pasien' => Request()->nopasien,
+            'no_pasien' => Request()->nopasien,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
