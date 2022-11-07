@@ -38,6 +38,10 @@ route::middleware(['auth'])->group(function () {
     //tambahloket
     Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);
+    //tambahobat
+    Route::get('/apoteker/tambah', [ApoterkerController::class, 'createobat']);
+    Route::post('/apoteker/list', [ApoterkerController::class, 'save']);
+
 
 
     //hapus

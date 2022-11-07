@@ -99,7 +99,7 @@
                             <div class="collapse" id="navbar-forms">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">Tambah Obat</a>
+                                        <a href="/apoteker/tambah" class="nav-link">Tambah Obat</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/apoteker/list" class="nav-link">List Obat</a>

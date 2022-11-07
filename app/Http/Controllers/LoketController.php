@@ -9,7 +9,7 @@ class LoketController extends Controller
 {
     public function __construct()
     {
-        $this-> Loket = new Loket;
+        $this->Loket = new Loket;
     }
 
     public function indexpasien()
@@ -38,7 +38,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'nopasien.required' => 'Harap Diisi',
+            'nopasien.required' => 'Wajib Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
