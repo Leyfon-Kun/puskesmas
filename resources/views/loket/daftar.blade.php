@@ -20,7 +20,7 @@
         @csrf
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
-            <input name="nopasien" type="number" value="{{ old('nopasien') }}" class="form-control" 
+            <input name="nopasien" type="number" value="{{ old('nopasien') }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Pasien">
             @error('nopasien')
                 <small class="form-text text-danger">{{ $message }}</small>
@@ -85,7 +85,7 @@
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
             <select name="jk" value="{{ old('jk') }}" class="form-control" id="exampleFormControlSelect1">
-                <option class="disabled">Jenis Kelamin</option>
+                <option disabled selected>Jenis Kelamin</option>
                 <option value="laki-laki">Laki-Laki</option>
                 <option value="perempuan">Perempuan</option>
             </select>

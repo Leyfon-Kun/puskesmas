@@ -9,7 +9,7 @@ class LoketController extends Controller
 {
     public function __construct()
     {
-        $this->Loket = new Loket;
+        $this-> Loket = new Loket;
     }
 
     public function indexpasien()

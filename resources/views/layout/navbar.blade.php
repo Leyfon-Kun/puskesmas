@@ -68,7 +68,7 @@
                             <div class="collapse" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="/loket/pasien" class="nav-link">Pasien</a>
+                                        <a href="/loket/pasien" class="nav-link">Tambah Pasien</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/loket/registrasi" class="nav-link">Registrasi Pasien</a>
@@ -102,7 +102,7 @@
                                         <a href="#" class="nav-link">Tambah Obat</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">List Obat</a>
+                                        <a href="/apoteker/list" class="nav-link">List Obat</a>
                                     </li>
                                 </ul>
                             </div>

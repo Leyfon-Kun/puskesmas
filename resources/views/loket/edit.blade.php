@@ -21,53 +21,78 @@
         @csrf
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
-            <input name="nopasien" type="number" value="{{ old('nopasien', $data->no_pasien) }}" class="form-control" 
+            <input name="nopasien" type="number" value="{{ old('nopasien', $data->no_pasien) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Pasien">
+            @error('nopasien')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Nama Pasien</label>
             <input name="nama" type="name" value="{{ old('nama', $data->nama_pasien) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Nama Pasien">
+            @error('nama')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">NIK</label>
             <input name="nik" type="number" value="{{ old('nik', $data->nik) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="NIK">
+            @error('nik')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tanggal Lahir</label>
             <input name="tgllhr" type="date" value="{{ old('tgllhr', $data->tgl_lahir) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tanggal Lahir">
+            @error('tgllhr')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Tempat Lahir</label>
             <input name="tmplhr" type="text" value="{{ old('tmplhr', $data->tmpt_lahir) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Tempat Lahir">
+            @error('tmplhr')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
             <input name="umur" type="number" value="{{ old('umur', $data->umur) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Umur">
+            @error('umur')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
             <input name="alamat" type="text" value="{{ old('alamat', $data->alamat) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Alamat">
+            @error('alamat')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
             <input name="nohp" type="number" value="{{ old('nohp', $data->telpon) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="No Telpon">
+            @error('nohp')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
-            <select name="jk" value="{{ old('jk') }}" class="form-control" id="exampleFormControlSelect1">
-                <option selected value="{{ $data->jk }}">{{ $data->jk }}
-                </option>
-                <option class="disabled">Jenis Kelamin</option>
+            <select name="jk" value="{{ old('jk', $data->jk) }}" class="form-control" id="exampleFormControlSelect1">
+                <option disabled selected>Jenis Kelamin</option>
                 <option value="laki-laki">Laki-Laki</option>
-                <option value="perempuan">Perempuan</option>
+                <option value="perempuan">Perempuan</option> 
             </select>
+            @error('jk')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <div class="col-lg-6 col-5 text-right">
             <button type="submit" class="btn btn-sm btn-neutral btn-secondary">Simpan</button>
