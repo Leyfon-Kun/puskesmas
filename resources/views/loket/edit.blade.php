@@ -85,10 +85,10 @@
         </div>
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlSelect1">Jenis Kelamin</label>
-            <select name="jk" value="{{ old('jk', $data->jk) }}" class="form-control" id="exampleFormControlSelect1">
+            <select name="jk" class="form-control" id="exampleFormControlSelect1">
                 <option disabled selected>Jenis Kelamin</option>
-                <option value="laki-laki">Laki-Laki</option>
-                <option value="perempuan">Perempuan</option> 
+                <option {{ $data->jk == 'laki-laki' ? 'selected' : '' }} value="{{ $data->jk }}">Laki-Laki</option>
+                <option {{ $data->jk == 'perempuan' ? 'selected' : '' }} value="{{ $data->jk }}">Perempuan</option>
             </select>
             @error('jk')
                 <small class="form-text text-danger">{{ $message }}</small>
