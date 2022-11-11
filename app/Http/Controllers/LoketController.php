@@ -33,7 +33,7 @@ class LoketController extends Controller
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            'umur' => 'required',
+            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
@@ -43,7 +43,7 @@ class LoketController extends Controller
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            'umur.required' => 'Wajib Diisi',
+            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
@@ -55,7 +55,7 @@ class LoketController extends Controller
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            'umur' => Request()->umur,
+            // 'umur' => Request()->umur,
             'alamat' => Request()->alamat,
             'telpon' => Request()->nohp,
             'jk' => Request()->jk
@@ -87,7 +87,7 @@ class LoketController extends Controller
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            'umur' => 'required',
+            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
@@ -97,7 +97,7 @@ class LoketController extends Controller
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            'umur.required' => 'Wajib Diisi',
+            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
@@ -109,7 +109,7 @@ class LoketController extends Controller
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            'umur' => Request()->umur,
+            // 'umur' => Request()->umur,
             'alamat' => Request()->alamat,
             'telpon' => Request()->nohp,
             'jk' => Request()->jk

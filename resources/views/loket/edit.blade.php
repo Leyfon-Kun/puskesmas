@@ -59,14 +59,14 @@
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
             <input name="umur" type="number" value="{{ old('umur', $data->umur) }}" class="form-control"
                 id="exampleFormControlInput1" placeholder="Umur">
             @error('umur')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
-        </div>
+        </div> --}}
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
             <input name="alamat" type="text" value="{{ old('alamat', $data->alamat) }}" class="form-control"
