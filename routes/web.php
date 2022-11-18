@@ -34,7 +34,7 @@ route::middleware(['auth'])->group(function () {
     //apotekerindex
     Route::get('/apoteker/list', [ApoterkerController::class, 'indexobat']);
 
-    //tambah
+    //create
     //tambahloket
     Route::get('/loket/pasien', [LoketController::class, 'createpasien']);
     Route::post('/loket/registrasi', [LoketController::class, 'save']);

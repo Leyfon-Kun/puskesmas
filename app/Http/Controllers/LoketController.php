@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Loket;
+use Carbon\Carbon;
 
 class LoketController extends Controller
 {
@@ -49,17 +50,23 @@ class LoketController extends Controller
             'jk.required' => 'Wajib diisi'
         ]);
 
+        // $dob = Carbon::parse(['umur']);
+        // $umur = $dob->umur;
+
+
         $result = [
             'no_pasien' => Request()->nopasien,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            // 'umur' => Request()->umur,
+            // 'umur' => $umur,
             'alamat' => Request()->alamat,
             'telpon' => Request()->nohp,
             'jk' => Request()->jk
         ];
+
+        dd($result);
 
         $this->Loket->createData($result);
 
@@ -115,7 +122,9 @@ class LoketController extends Controller
             'jk' => Request()->jk
         ];
 
+        dd($result);
         $this->Loket->EditData($id, $result);
+
 
         return redirect('/loket/registrasi')->with('pesan', 'Data Berhasil Di Edit');
     }

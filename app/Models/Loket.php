@@ -5,12 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+
 
 class Loket extends Model
 {
     public function showData()
     {
         return DB::table('pasien')->get();
+    }
+
+    public function age()
+    {
+        return Carbon::parse($this->attributes['tgl_lahir'])->umur;
     }
 
     public function createData($data)
