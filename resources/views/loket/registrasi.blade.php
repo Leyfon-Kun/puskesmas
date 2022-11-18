@@ -66,14 +66,17 @@
                             <thead class="thead-light">
                                 <tr role="row">
                                     <th scope="col" class="sort">No</th>
+                                    <th scope="col" class="sort">No Antrian</th>
                                     <th scope="col" class="sort">Nama</th>
                                     <th scope="col" class="sort">Nik</th>
                                     <th scope="col" class="sort">tanggal Lahir</th>
                                     <th scope="col" class="sort">Tempat Lahir</th>
-                                    <th scope="col" class="sort">Umur</th>
                                     <th scope="col" class="sort">Alamat</th>
+                                    <th scope="col" class="sort">Umur</th>
                                     <th scope="col" class="sort">Telpon</th>
                                     <th scope="col" class="sort">Jenis Kelamin</th>
+                                    <th scope="col" class="sort">Tanggal Daftar</th>
+                                    <th scope="col" class="sort">Status</th>
                                     <th scope="col" class="sort">Action</th>
                                 </tr>
                             </thead>
@@ -89,6 +92,8 @@
                                         <td>{{ $view->alamat }}</td>
                                         <td>{{ $view->telpon }}</td>
                                         <td>{{ $view->jk }}</td>
+                                        {{-- <td>{{ $view->status }}</td> --}}
+                                        {{-- <td>{{ $view->tgl_daftar }}</td> --}}
                                         <td>
                                             <div class="dropdown show">
                                                 <a href="#" role="button" id="dropdownMenuLink"
