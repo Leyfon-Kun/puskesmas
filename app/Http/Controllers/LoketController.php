@@ -29,7 +29,7 @@ class LoketController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            'nopasien' => 'required',
+            'noantrian' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
@@ -39,7 +39,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'nopasien.required' => 'Wajib Diisi',
+            'noantrian.required' => 'Wajib Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
@@ -50,12 +50,11 @@ class LoketController extends Controller
             'jk.required' => 'Wajib diisi'
         ]);
 
-        // $dob = Carbon::parse(['umur']);
-        // $umur = $dob->umur;
-
+        // $tgllhr = Carbon::parse(['tgl_lahir']);
+        // $umur = $tgllhr->umur;
 
         $result = [
-            'no_pasien' => Request()->nopasien,
+            'no_antrian' => Request()->noantrian,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
@@ -89,7 +88,7 @@ class LoketController extends Controller
     public function edit($id)
     {
         Request()->validate([
-            'nopasien' => 'required',
+            'noantrian' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
@@ -99,7 +98,7 @@ class LoketController extends Controller
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'nopasien.required' => 'Harap Diisi',
+            'noantrian.required' => 'Harap Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
@@ -111,7 +110,7 @@ class LoketController extends Controller
         ]);
 
         $result = [
-            'no_pasien' => Request()->nopasien,
+            'no_antrian' => Request()->noantrian,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,

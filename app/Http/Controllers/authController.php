@@ -29,7 +29,8 @@ class authController extends Controller
             return redirect('/diagnosa');
         } else if (Auth::attempt(['username' => $username, 'password' => $password, 'role' => 'apoteker'])) {
             return redirect('/apoteker');
-        } else (dd('data tidak ditemukan'));
+        } else
+            return redirect('/')->with('pesan', 'Data tidak ditemukan');
     }
 
     public function logout()

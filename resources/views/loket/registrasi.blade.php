@@ -65,7 +65,6 @@
                             aria-describedby="datatable-basic_info">
                             <thead class="thead-light">
                                 <tr role="row">
-                                    <th scope="col" class="sort">No</th>
                                     <th scope="col" class="sort">No Antrian</th>
                                     <th scope="col" class="sort">Nama</th>
                                     <th scope="col" class="sort">Nik</th>
@@ -83,17 +82,17 @@
                             <tbody>
                                 @foreach ($pasien as $view)
                                     <tr>
-                                        <td>{{ $view->no_pasien }}</td>
+                                        <td>{{ $view->no_antrian }}</td>
                                         <td>{{ $view->nama_pasien }}</td>
                                         <td>{{ $view->nik }}</td>
                                         <td>{{ $view->tgl_lahir }}</td>
                                         <td>{{ $view->tmpt_lahir }}</td>
-                                        <td>{{ $view->umur }}</td>
                                         <td>{{ $view->alamat }}</td>
+                                        <td>{{ $view->umur }}</td>
                                         <td>{{ $view->telpon }}</td>
                                         <td>{{ $view->jk }}</td>
-                                        {{-- <td>{{ $view->status }}</td> --}}
-                                        {{-- <td>{{ $view->tgl_daftar }}</td> --}}
+                                        <td>{{ $view->tgl_daftar }}</td>
+                                        <td>{{ $view->status }}</td>
                                         <td>
                                             <div class="dropdown show">
                                                 <a href="#" role="button" id="dropdownMenuLink"
