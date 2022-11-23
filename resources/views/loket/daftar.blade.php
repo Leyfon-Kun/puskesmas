@@ -58,14 +58,6 @@
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
-        {{-- <div class="form-group">
-            <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
-            <input name="umur" type="number" value="{{ old('umur') }}" class="form-control"
-                id="exampleFormControlInput1" placeholder="Umur">
-            @error('umur')
-                <small class="form-text text-danger">{{ $message }}</small>
-            @enderror
-        </div> --}}
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
             <input name="alamat" type="text" value="{{ old('alamat') }}" class="form-control"
@@ -74,6 +66,14 @@
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
+        {{-- <div class="form-group">
+            <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
+            <input name="umur" type="number" value="{{ old('umur') }}" class="form-control"
+                id="exampleFormControlInput1" placeholder="Umur">
+            @error('umur')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
+        </div> --}}
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">No Telpon</label>
             <input name="nohp" type="number" value="{{ old('nohp') }}" class="form-control"
@@ -90,6 +90,14 @@
                 <option value="perempuan">Perempuan</option>
             </select>
             @error('jk')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="exampleFormControlInput1">Tanggal Daftar</label>
+            <input name="tgldftr" type="date" value="{{ old('tgldftr') }}" class="form-control"
+                id="exampleFormControlInput1" placeholder="No Telpon">
+            @error('tgldftr')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>

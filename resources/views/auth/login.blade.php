@@ -28,7 +28,7 @@
                 @endif
                 <div class="form-floating">
                     <label for="floatingInput">Username:</label>
-                    <input type="username" class="form-control" value="{{ old('username') }}" name="username"
+                    <input autofocus type="username" class="form-control" value="{{ old('username') }}" name="username"
                         id="floatingInput" placeholder="Username">
                 </div>
                 <div class="form-floating">

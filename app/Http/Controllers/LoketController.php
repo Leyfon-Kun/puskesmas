@@ -50,7 +50,7 @@ class LoketController extends Controller
             'jk.required' => 'Wajib diisi'
         ]);
 
-        // $tgllhr = Carbon::parse(['tgl_lahir']);
+        $umur = Carbon::parse(Request()->tgllhr)->age;
         // $umur = $tgllhr->umur;
 
         $result = [
@@ -59,13 +59,13 @@ class LoketController extends Controller
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            // 'umur' => $umur,
             'alamat' => Request()->alamat,
+            'umur' => $umur,
             'telpon' => Request()->nohp,
-            'jk' => Request()->jk
+            'jk' => Request()->jk,
+            'tgl_daftar' => Request()->tgldftr
         ];
 
-        dd($result);
 
         $this->Loket->createData($result);
 
