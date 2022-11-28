@@ -60,7 +60,6 @@ class LoketController extends Controller
             'umur' => $umur,
             'telpon' => Request()->nohp,
             'jk' => Request()->jk,
-            'tgl_daftar' => Request()->tgldftr
         ];
 
 
@@ -116,7 +115,6 @@ class LoketController extends Controller
             'umur' => $umur,
             'telpon' => Request()->nohp,
             'jk' => Request()->jk,
-            'tgl_daftar' => Request()->tgldftr
         ];
 
         $this->Loket->EditData($id, $result);

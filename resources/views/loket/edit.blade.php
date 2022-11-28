@@ -86,14 +86,6 @@
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <div class="form-group">
-            <label class="form-control-label" for="exampleFormControlInput1">Tanggal Daftar</label>
-            <input name="tgldftr" type="date" value="{{ old('tgldftr', $data->tgl_daftar) }}" class="form-control"
-                id="exampleFormControlInput1">
-            @error('tgldftr')
-                <small class="form-text text-danger">{{ $message }}</small>
-            @enderror
-        </div>
         <div class="col-lg-6 col-5 text-right">
             <button type="submit" class="btn btn-sm btn-neutral btn-secondary">Simpan</button>
         </div>
