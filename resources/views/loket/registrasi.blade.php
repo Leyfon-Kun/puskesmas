@@ -85,13 +85,15 @@
                                         <td>{{ $view->no_antrian }}</td>
                                         <td>{{ $view->nama_pasien }}</td>
                                         <td>{{ $view->nik }}</td>
-                                        <td>{{ $view->tgl_lahir }}</td>
+                                        <td>{{ \carbon\carbon::createFromTimestamp(strtotime($view->tgl_lahir))->format('D, d M Y') }}
+                                        </td>
                                         <td>{{ $view->tmpt_lahir }}</td>
                                         <td>{{ $view->alamat }}</td>
                                         <td>{{ $view->umur }}</td>
                                         <td>{{ $view->telpon }}</td>
                                         <td>{{ $view->jk }}</td>
-                                        <td>{{ $view->tgl_daftar }}</td>
+                                        <td>{{ \carbon\carbon::createFromTimestamp(strtotime($view->tgl_daftar))->format('D, d M Y') }}
+                                        </td>
                                         <td>{{ $view->status }}</td>
                                         <td>
                                             <div class="dropdown show">

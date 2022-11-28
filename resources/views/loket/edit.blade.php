@@ -20,10 +20,10 @@
         @method('put')
         @csrf
         <div class="form-group">
-            <label class="form-control-label" for="exampleFormControlInput1">No Pasien</label>
-            <input name="nopasien" type="number" value="{{ old('nopasien', $data->no_pasien) }}" class="form-control"
-                id="exampleFormControlInput1" placeholder="No Pasien">
-            @error('nopasien')
+            <label class="form-control-label" for="exampleFormControlInput1">No Antrian</label>
+            <input name="noantrian" type="number" value="{{ old('noantrian', $data->no_antrian) }}" class="form-control"
+                id="exampleFormControlInput1" placeholder="No antrian">
+            @error('noantrian')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
@@ -59,14 +59,6 @@
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>
-        {{-- <div class="form-group">
-            <label class="form-control-label" for="exampleFormControlInput1">Umur</label>
-            <input name="umur" type="number" value="{{ old('umur', $data->umur) }}" class="form-control"
-                id="exampleFormControlInput1" placeholder="Umur">
-            @error('umur')
-                <small class="form-text text-danger">{{ $message }}</small>
-            @enderror
-        </div> --}}
         <div class="form-group">
             <label class="form-control-label" for="exampleFormControlInput1">Alamat</label>
             <input name="alamat" type="text" value="{{ old('alamat', $data->alamat) }}" class="form-control"
@@ -91,6 +83,14 @@
                 <option {{ $data->jk == 'perempuan' ? 'selected' : '' }} value="{{ $data->jk }}">Perempuan</option>
             </select>
             @error('jk')
+                <small class="form-text text-danger">{{ $message }}</small>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" for="exampleFormControlInput1">Tanggal Daftar</label>
+            <input name="tgldftr" type="date" value="{{ old('tgldftr', $data->tgl_daftar) }}" class="form-control"
+                id="exampleFormControlInput1">
+            @error('tgldftr')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
         </div>

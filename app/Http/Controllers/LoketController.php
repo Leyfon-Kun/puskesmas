@@ -34,7 +34,6 @@ class LoketController extends Controller
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
@@ -44,14 +43,12 @@ class LoketController extends Controller
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
         ]);
 
         $umur = Carbon::parse(Request()->tgllhr)->age;
-        // $umur = $tgllhr->umur;
 
         $result = [
             'no_antrian' => Request()->noantrian,
@@ -93,21 +90,21 @@ class LoketController extends Controller
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'noantrian.required' => 'Harap Diisi',
+            'noantrian.required' => 'Wajib Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
         ]);
+
+        $umur = Carbon::parse(Request()->tgllhr)->age;
 
         $result = [
             'no_antrian' => Request()->noantrian,
@@ -115,13 +112,13 @@ class LoketController extends Controller
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            // 'umur' => Request()->umur,
             'alamat' => Request()->alamat,
+            'umur' => $umur,
             'telpon' => Request()->nohp,
-            'jk' => Request()->jk
+            'jk' => Request()->jk,
+            'tgl_daftar' => Request()->tgldftr
         ];
 
-        dd($result);
         $this->Loket->EditData($id, $result);
 
 
