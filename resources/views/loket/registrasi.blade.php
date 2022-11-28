@@ -94,7 +94,9 @@
                                         <td>{{ $view->jk }}</td>
                                         <td>{{ \carbon\carbon::createFromTimestamp(strtotime($view->tgl_daftar))->format('D, d M Y') }}
                                         </td>
-                                        <td>{{ $view->status }}</td>
+                                        <td><button type="button"
+                                                class="btn {{ $view->status == 0 ? 'btn-danger' : 'btn-success' }}">{{ $view->status == 0 ? 'Belum' : 'Sudah' }}</button>
+                                        </td>
                                         <td>
                                             <div class="dropdown show">
                                                 <a href="#" role="button" id="dropdownMenuLink"
