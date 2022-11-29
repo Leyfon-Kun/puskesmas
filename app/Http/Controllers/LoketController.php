@@ -29,44 +29,39 @@ class LoketController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            'nopasien' => 'required',
+            'noantrian' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'nopasien.required' => 'Wajib Diisi',
+            'noantrian.required' => 'Wajib Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
         ]);
 
-        // $dob = Carbon::parse(['umur']);
-        // $umur = $dob->umur;
-
+        $umur = Carbon::parse(Request()->tgllhr)->age;
 
         $result = [
-            'no_pasien' => Request()->nopasien,
+            'no_antrian' => Request()->noantrian,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            // 'umur' => $umur,
             'alamat' => Request()->alamat,
+            'umur' => $umur,
             'telpon' => Request()->nohp,
-            'jk' => Request()->jk
+            'jk' => Request()->jk,
         ];
 
-        dd($result);
 
         $this->Loket->createData($result);
 
@@ -89,40 +84,39 @@ class LoketController extends Controller
     public function edit($id)
     {
         Request()->validate([
-            'nopasien' => 'required',
+            'noantrian' => 'required',
             'nama' => 'required',
             'nik' => 'required',
             'tgllhr' => 'required',
             'tmplhr' => 'required',
-            // 'umur' => 'required',
             'alamat' => 'required',
             'nohp' => 'required',
             'jk' => 'required'
         ], [
-            'nopasien.required' => 'Harap Diisi',
+            'noantrian.required' => 'Wajib Diisi',
             'nama.required' => 'Wajib Diisi',
             'nik.required' => 'Wajib Diisi',
             'tgllhr.required' => 'Wajib Diisi',
             'tmplhr.required' => 'Wajib Diisi',
-            // 'umur.required' => 'Wajib Diisi',
             'alamat.required' => 'Wajib Diisi',
             'nohp.required' => 'Wajib Diisi',
             'jk.required' => 'Wajib diisi'
         ]);
 
+        $umur = Carbon::parse(Request()->tgllhr)->age;
+
         $result = [
-            'no_pasien' => Request()->nopasien,
+            'no_antrian' => Request()->noantrian,
             'nama_pasien' => Request()->nama,
             'nik' => Request()->nik,
             'tgl_lahir' => Request()->tgllhr,
             'tmpt_lahir' => Request()->tmplhr,
-            // 'umur' => Request()->umur,
             'alamat' => Request()->alamat,
+            'umur' => $umur,
             'telpon' => Request()->nohp,
-            'jk' => Request()->jk
+            'jk' => Request()->jk,
         ];
 
-        dd($result);
         $this->Loket->EditData($id, $result);
 
 

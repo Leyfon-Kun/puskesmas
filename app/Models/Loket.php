@@ -17,7 +17,7 @@ class Loket extends Model
 
     public function age()
     {
-        return Carbon::parse($this->attributes['tgl_lahir'])->umur;
+        return Carbon::parse($this->attributes['tgl_lahir'])->age;
     }
 
     public function createData($data)

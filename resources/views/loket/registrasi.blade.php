@@ -65,7 +65,6 @@
                             aria-describedby="datatable-basic_info">
                             <thead class="thead-light">
                                 <tr role="row">
-                                    <th scope="col" class="sort">No</th>
                                     <th scope="col" class="sort">No Antrian</th>
                                     <th scope="col" class="sort">Nama</th>
                                     <th scope="col" class="sort">Nik</th>
@@ -83,17 +82,21 @@
                             <tbody>
                                 @foreach ($pasien as $view)
                                     <tr>
-                                        <td>{{ $view->no_pasien }}</td>
+                                        <td>{{ $view->no_antrian }}</td>
                                         <td>{{ $view->nama_pasien }}</td>
                                         <td>{{ $view->nik }}</td>
-                                        <td>{{ $view->tgl_lahir }}</td>
+                                        <td>{{ \carbon\carbon::createFromTimestamp(strtotime($view->tgl_lahir))->format('D, d M Y') }}
+                                        </td>
                                         <td>{{ $view->tmpt_lahir }}</td>
-                                        <td>{{ $view->umur }}</td>
                                         <td>{{ $view->alamat }}</td>
+                                        <td>{{ $view->umur }}</td>
                                         <td>{{ $view->telpon }}</td>
                                         <td>{{ $view->jk }}</td>
-                                        {{-- <td>{{ $view->status }}</td> --}}
-                                        {{-- <td>{{ $view->tgl_daftar }}</td> --}}
+                                        <td>{{ \carbon\carbon::createFromTimestamp(strtotime($view->tgl_daftar))->format('D, d M Y') }}
+                                        </td>
+                                        <td><button type="button"
+                                                class="btn {{ $view->status == 0 ? 'btn-danger' : 'btn-success' }}">{{ $view->status == 0 ? 'Belum' : 'Sudah' }}</button>
+                                        </td>
                                         <td>
                                             <div class="dropdown show">
                                                 <a href="#" role="button" id="dropdownMenuLink"

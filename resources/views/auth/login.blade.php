@@ -20,9 +20,15 @@
                 <div class="container d-flex no-block card-body ">
                     <img class="mb-10" src="{{ asset('template') }}/assets/img/brand/unknown.png" alt="">
                 </div>
+                @if (Session::has('pesan'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text">{{ Session::get('pesan') }}</span>
+                    </div>
+                @endif
                 <div class="form-floating">
                     <label for="floatingInput">Username:</label>
-                    <input type="username" class="form-control" value="{{ old('username') }}" name="username"
+                    <input autofocus type="username" class="form-control" value="{{ old('username') }}" name="username"
                         id="floatingInput" placeholder="Username">
                 </div>
                 <div class="form-floating">
